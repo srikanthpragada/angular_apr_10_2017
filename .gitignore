@@ -39,5 +39,7 @@ jspm_packages
 src/app/*.js
 src/app/*.js.map
 
+*.js
+
 upload.bat
 
