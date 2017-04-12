@@ -38,6 +38,7 @@ jspm_packages
 
 src/app/*.js
 src/app/*.js.map
+typescript/*.js
 
 *.js
 
