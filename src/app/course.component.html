@@ -3,7 +3,11 @@
         <h1>Course Details</h1>
         <h2> {{name}} </h2>
 
+        <div *ngIf="online">Available Online also</div>
+        <div [hidden]="!online">Available Online also</div>
+
         <h3>Topics </h3>
+
 
         <ul>
            <li *ngFor="let t of topics"> {{t}}</li>
@@ -13,6 +17,7 @@
         <button (click)="addTopic(topic.value)">Add Topic </button>
         <p></p>
         <button (click)="clearTopics()">Clear Topics </button>
+
 
     </body>
 </html>

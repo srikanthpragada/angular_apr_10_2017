@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'course',
-  templateUrl : 'app/app.coursecomponent.html'
+  templateUrl : 'app/course.component.html'
 })
 export class CourseComponent {
   name : string = 'Angular';
   topics : string [] = [ "Getting Started", "Directives", "Forms", "Http"];
+  online : boolean = false;
 
   addTopic(topic : string):void
   {
