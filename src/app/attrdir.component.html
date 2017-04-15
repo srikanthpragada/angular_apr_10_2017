@@ -7,5 +7,9 @@
         <input type="checkbox" [(ngModel)]="myclasses.big">Big Letters
         <input type="checkbox" [(ngModel)]="myclasses.red">Red Color
 
+        <div [ngStyle]="mystyles">My Styles Applied </div>
+
+        <div [style.color]="'green'">Green Color</div>
+
     </body>
 </html>
