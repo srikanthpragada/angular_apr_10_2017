@@ -1,13 +1,13 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-
-import { BracketsPipe } from './brackets.pipe';
-import { CustomPipesComponent } from './custom-pipes.component';
+import { LoginComponent } from './forms/login.component';
+// import { LogService } from './services/log.service';
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule ],
-  declarations: [ CustomPipesComponent , BracketsPipe ],
-  bootstrap:    [ CustomPipesComponent ]
+  imports: [BrowserModule, FormsModule],
+  declarations: [LoginComponent],
+  bootstrap: [LoginComponent],
+  // providers : [LogService]
 })
 export class AppModule { }
