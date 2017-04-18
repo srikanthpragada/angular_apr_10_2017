@@ -1,13 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms';
-import { LoginComponent } from './forms/login.component';
-// import { LogService } from './services/log.service';
+import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { ReactiveLoginComponent } from './forms/reactive-login.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule],
-  declarations: [LoginComponent],
-  bootstrap: [LoginComponent],
-  // providers : [LogService]
+  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
+  declarations: [ReactiveLoginComponent],
+  bootstrap: [ReactiveLoginComponent  ],
 })
 export class AppModule { }
