@@ -8,18 +8,22 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms';
 export class ReactiveLoginComponent {
   
   loginForm : FormGroup;
+  isSubmitted : boolean = false; 
 
   constructor (private fb: FormBuilder ) {
     this.loginForm =  this.fb.group(
       {
-        username : ["",Validators.required],
+        username : ["", Validators.compose
+                   ([Validators.required, Validators.minLength(4)])],
         password : ["",Validators.required]
       }
     )
   }
   
   onSubmit(): void{
+    this.isSubmitted = true;
     console.log( this.loginForm.controls["username"].value);
+    console.log( this.loginForm.value);
     // this.loginForm.setValue( { "username" : ""});
   }
 }
