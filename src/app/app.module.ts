@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { ReactiveLoginComponent } from './forms/reactive-login.component';
 
-import { CartComponent} from './cart/cart.component';
+import { BooksComponent } from './http/books.component';
+import { ListBooksComponent } from './http/list-books.component';
+
+import { GitHubComponent } from './http/github.component';
 
 @NgModule({
-  imports: [BrowserModule, FormsModule, ReactiveFormsModule],
-  declarations: [ CartComponent],
-  bootstrap: [ CartComponent  ],
+  imports: [BrowserModule, HttpModule],
+  declarations: [BooksComponent, ListBooksComponent, GitHubComponent],
+  bootstrap: [ GitHubComponent ],
 })
 export class AppModule { }

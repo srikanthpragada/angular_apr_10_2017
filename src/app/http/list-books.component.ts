@@ -1,0 +1,27 @@
+import { Component } from '@angular/core';
+import { OnInit } from '@angular/core';
+import { Book } from './Book';
+import { Http, Response } from '@angular/http';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/filter';
+
+@Component({
+    selector: 'st-books',
+    templateUrl: 'app/http/books.component.html'
+})
+export class ListBooksComponent implements OnInit {
+    books: Book[];
+    constructor(private http: Http) {
+
+    }
+
+    ngOnInit() {
+        this.http.get("/app/http/books.json")
+        .map(resp => <Book[]> resp.json())   
+        // .filter( book =>  book.price >  ) 
+        .subscribe( books => this.books =  books);
+    }
+
+
+}
