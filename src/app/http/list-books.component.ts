@@ -19,7 +19,6 @@ export class ListBooksComponent implements OnInit {
     ngOnInit() {
         this.http.get("/app/http/books.json")
         .map(resp => <Book[]> resp.json())   
-        // .filter( book =>  book.price >  ) 
         .subscribe( books => this.books =  books);
     }
 

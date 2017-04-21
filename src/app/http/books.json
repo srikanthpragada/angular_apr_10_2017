@@ -8,5 +8,10 @@
         "title": "Angular 2 Cookbook",
         "author": "Matt Frisbie",
         "price": 1199
+    },
+    {
+        "title": "Angular 2 in Action",
+        "author": "Jason and Jermey",
+        "price": 670
     }
 ]
